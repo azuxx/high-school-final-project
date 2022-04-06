@@ -1,0 +1,15 @@
+<script language="vbscript" runat="server">
+Sub Session_OnStart
+Session("login") = False
+numart=0
+dd=""
+dd1=""
+desc=""
+prez=0
+Session("artcar") = numart
+session("stringa")=dd
+session("qta")=dd1
+session("descriz")=desc
+session("prezunit")=prez
+End Sub
+</script>

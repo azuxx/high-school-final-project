@@ -1,0 +1,108 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="it">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="File-List" href="registrati_file/filelist.xml">
+<title>registrati</title>
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]-->
+<script language="vbscript">
+sub invia_onclick()
+msgbox ("Confermando la registrazione si acconsentisce alla legge sulla tutela della privacy (dlgs. 196/2000)")
+if frm2.rnome.value="" or frm2.rcognome.value="" or frm2.rindirizzo.value="" or frm2.rcitta.value="" or frm2.rmail.value="" or frm2.rpass.value="" or frm2.rdatanas.value="" then
+	msgbox ("verificare che i campi di inserimento non siano vuoti o siano stati inseriti dati scorretti!")
+else
+	frm2.submit
+end if
+end sub
+</script>
+<!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body background="images/sfondo.gif">
+
+<p>&nbsp;</p>
+
+<p><!--[if gte vml 1]><v:shapetype id="_x0000_t136"
+ coordsize="21600,21600" o:spt="136" adj="10800" path="m@7,l@8,m@5,21600l@6,21600e">
+ <v:formulas>
+  <v:f eqn="sum #0 0 10800"/>
+  <v:f eqn="prod #0 2 1"/>
+  <v:f eqn="sum 21600 0 @1"/>
+  <v:f eqn="sum 0 0 @2"/>
+  <v:f eqn="sum 21600 0 @3"/>
+  <v:f eqn="if @0 @3 0"/>
+  <v:f eqn="if @0 21600 @1"/>
+  <v:f eqn="if @0 0 @2"/>
+  <v:f eqn="if @0 @4 21600"/>
+  <v:f eqn="mid @5 @6"/>
+  <v:f eqn="mid @8 @5"/>
+  <v:f eqn="mid @7 @8"/>
+  <v:f eqn="mid @6 @7"/>
+  <v:f eqn="sum @6 0 @5"/>
+ </v:formulas>
+ <v:path textpathok="t" o:connecttype="custom" o:connectlocs="@9,0;@10,10800;@11,21600;@12,10800"
+  o:connectangles="270,180,90,0"/>
+ <v:textpath on="t" fitshape="t"/>
+ <v:handles>
+  <v:h position="#0,bottomRight" xrange="6629,14971"/>
+ </v:handles>
+ <o:lock v:ext="edit" text="t" shapetype="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t136" alt="Registrazione"
+ style='width:4in;height:33pt'>
+ <v:fill src="registrati_file/image001.jpg" o:title="DSCN0105" recolor="t"
+  rotate="t" type="frame"/>
+ <v:shadow on="t" opacity="52429f"/>
+ <v:textpath style='font-family:"Cracked Johnnie";font-size:32pt;font-style:italic;
+  v-text-kern:t' trim="t" fitpath="t" string="Registrazione"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=389 height=48
+src="registrati_file/image002.gif" alt=Registrazione v:shapes="_x0000_s1025"><![endif]></p>
+<p>&nbsp;</p>
+<p><font face="Tahoma" size="4">Compila il seguente modulo di registrazione per 
+poter effettuare acquisti on-line</font></p>
+<form name="frm2" action="registrazione.asp" method=post>
+<table border="1" width="92%" id="table1" background="images/imagequality_2.jpg">
+	<tr>
+		<td width="16%"><font face="Tahoma" size="4">Nome</font></td>
+		<td width="26%"><font size="4" face="Tahoma"><input type="text" name="rnome" size="29"></font></td>
+		<td width="24%"><font face="Tahoma" size="4">Cognome</font></td>
+		<td width="27%"><font size="4" face="Tahoma"><input type="text" name="rcognome" size="29"></font></td>
+	</tr>
+	<tr>
+		<td width="16%"><font face="Tahoma" size="4">Data di nascita</font></td>
+		<td><font size="4" face="Tahoma">
+		<input type="text" name="rdatanas" size="29"></font></td>
+		<td><font face="Tahoma" size="4">Indirizzo (via, n° 
+		civico)</font></td>
+		<td><font size="4" face="Tahoma">
+		<input type="text" name="rindirizzo" size="29"></font></td>
+	</tr>
+	<tr>
+		<td width="16%"><font face="Tahoma" size="4">Città</font></td>
+		<td><font size="4" face="Tahoma">
+		<input type="text" name="rcitta" size="29"></font></td>
+		<td><font face="Tahoma" size="4">E-mail</font></td>
+		<td><font size="4" face="Tahoma">
+		<input type="text" name="rmail" size="29"></font></td>
+	</tr>
+	<tr>
+		<td width="16%" height="25"><font face="Tahoma" size="4">Password</font></td>
+		<td height="25"><font size="4" face="Tahoma">
+		<input type="password" name="rpass" size="29"></font></td>
+		<td height="25" colspan="2">&nbsp;</td>
+	</tr>
+	</table>
+<input type="button" value="Invia" name="invia" style="width: 85px; height: 35px; font-family: Tahoma; font-size: 14pt; float: left">
+<p>&nbsp;</p>
+</form>
+</body>
+
+</html>

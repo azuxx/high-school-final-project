@@ -1,0 +1,89 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="it">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>menu</title>
+<base target="principale">
+<STYLE TYPE="text/css">
+         #clock {color:#FFFFFF; font-size:80%; font-family:"Tahoma"} /* Format the clock. */
+</STYLE>
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+         var MS = navigator.appVersion.indexOf("MSIE");
+         window.isIE4 = (MS > 0) &&
+            (parseInt(navigator.appVersion.substring(MS + 5, MS + 6)) 
+               >= 4);
+
+         function lead0(val) {
+            return (val < 10) ? "0" + val.toString() : val;
+         }
+
+         function buildTime() {
+            var time = new Date();
+            var ampm = " AM";
+            var h = time.getHours();
+            if (h > 12) {
+               h = h - 12;
+               ampm = " PM";
+            }
+            return lead0(h) + ":" + lead0(time.getMinutes()) + ":" +
+               lead0(time.getSeconds()) + ampm;
+         }
+
+         function tick() {
+            document.all.clock.innerText = buildTime();
+         }
+</script>
+</head>
+
+<body ONUNLOAD="if (null != window.tmr) clearInterval(window.tmr);" ONLOAD="if (window.isIE4) window.tmr = setInterval('tick()', 999);" onload="FP_preloadImgs(/*url*/'images/button11.gif', /*url*/'images/button12.gif', /*url*/'images/button14.gif', /*url*/'images/button15.gif', /*url*/'images/button17.gif', /*url*/'images/button18.gif', /*url*/'images/button1A.gif', /*url*/'images/button1B.gif', /*url*/'images/button1D.gif', /*url*/'images/button1E.gif')" background="images/body_bg.jpg">
+
+<p>&nbsp;</p>
+<p align="center">
+<font face="Tahoma" style="font-size: 17pt; font-style: italic; font-weight:700">Menu</font></p>
+
+<div align=center style="position: absolute; width: 161px; height: 254px; z-index: 1; left: 28px; top: 110px" id="rettangolo">
+	<a target="principale" href="home.htm">
+<img border="0" id="img1" src="images/button10.gif" height="48" width="145" alt="Home" fp-style="fp-btn: Glass Tab 1; fp-font-size: 16; fp-transparent: 1" fp-title="Home" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/button11.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/button10.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/button12.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/button11.gif')"></a><a target="principale" href="clienti.htm"><img border="0" id="img2" src="images/button13.gif" height="48" width="145" alt="Area clienti" fp-style="fp-btn: Glass Tab 2; fp-font-size: 16; fp-transparent: 1" fp-title="Area clienti" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'images/button14.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'images/button13.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'images/button15.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'images/button14.gif')"></a><a target="principale" href="catalogo.asp"><img border="0" id="img3" src="images/button16.gif" height="48" width="145" alt="Catalogo" fp-style="fp-btn: Glass Tab 3; fp-font-size: 16; fp-transparent: 1" fp-title="Catalogo" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'images/button17.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'images/button16.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'images/button18.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'images/button17.gif')"></a><a target="principale" href="assistenza.htm"><img border="0" id="img5" src="images/button19.gif" height="48" width="145" alt="Assistenza" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'images/button1A.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'images/button19.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'images/button1B.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'images/button1A.gif')" fp-style="fp-btn: Glass Tab 5; fp-font-size: 16; fp-transparent: 1" fp-title="Assistenza"></a><a target="principale" href="carrello.asp"><img border="0" id="img4" src="images/button1C.gif" height="48" width="145" alt="Carrello" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/button1D.gif')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/button1C.gif')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/button1E.gif')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/button1D.gif')" fp-style="fp-btn: Glass Tab 4; fp-font-size: 16; fp-transparent: 1" fp-title="Carrello"></a></div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div align=center style="border:7px double #2B4668; position: absolute; width: 141px; height: 31px; z-index: 1; left: 38px; top: 430px; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px" id="ora">
+<SPAN ID="clock">
+         <SCRIPT LANGUAGE="JavaScript">
+            document.write(buildTime());
+         </SCRIPT>
+</SPAN>
+</div>
+</p>
+
+</body>
+
+</html>
